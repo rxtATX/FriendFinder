@@ -8,7 +8,7 @@ var PORT = 8080;
 var api = require("./app/routing/apiRoutes.js");
 var routes = require("./app/routing/htmlRoutes.js");
 
-app.use("/api/friends", api.getfriends);
+app.use("/api/:friends?", api.getfriends);
 app.use("/api/friends", api.postfriends);
 app.use("/", routes.home);
 app.use("/survey", routes.survey);

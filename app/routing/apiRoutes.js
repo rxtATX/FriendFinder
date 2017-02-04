@@ -2,8 +2,7 @@ var express = require("express");
 var users = require("../data/friends.js")
 var app = express();
 
-exports.getfriends = app.get("/api/friends", function(request, response) {
-        
+exports.getfriends = app.get("/api/:friends?", function(request, response) {
   var friend = req.params.users;
 
   if (friend) {
