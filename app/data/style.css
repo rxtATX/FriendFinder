@@ -1,0 +1,19 @@
+        .headings{
+            font-family: 'Carter One', cursive;
+            padding-bottom: 6%;
+            background-color: #D9EDF7;
+        }
+        .survey-body{
+            padding: 4%;
+            background-color: lightsteelblue;
+        }
+        .button-holder{
+            width:75%;
+        }
+        dd{
+            padding-top: 1%;
+            font-weight: bold;
+        }
+        #progressBar{
+            width: 80%;
+        }
