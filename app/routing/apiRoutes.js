@@ -1,31 +1,29 @@
 var express = require("express");
-var users = require("../data/friends.js")
 var app = express();
 
-exports.getfriends = app.get("/api/:friends?", function(request, response) {
-  var friend = req.params.users;
+var server = require("../../server");
+var data = server.data;
 
-  if (friend) {
-    console.log(friend);
+exports.getfriends = app.get("/api/:data?", function(req, res) {
+  var friendSelected = req.params.data;
+  if (friendSelected) {
 
-    for (var i = 0; i < users.length; i++) {
-      if (friend === users[i].routeName) {
-        res.json(users[i]);
+    for (var i = 0; i < data.length; i++) {
+      if (friendSelected === data[i].routeName) {
+        res.json(data[i]);
         return;
-      }
+     }
     }
-
+    
     res.send("No friends found");
   }
   else {
-    res.json(users);
+    res.json(data);
   }
 });
 
-exports.postfriends = app.post("/api/friends", function(req, res) {
+exports.postfriends = app.post("/api", function(req, res) {
   var newUser = req.body;
-  console.log(newUser);
-
-  users.push(newUser);
+  data.push(newUser);
   res.json(newUser);
 });
