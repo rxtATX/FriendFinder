@@ -9,276 +9,286 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="../data/friends.js"></script>
 </head>
-<body>
+<body id="secondPageContent">
     <section class="container survey-body">
         <container class="text-center headings">
             <h1>Friend Finder Survey</h1>
             <h2>Take our survey to find your newest friend!</h2>
         </container>
-        <container class="container" id="survey">
-            <dl class="dl-horizontal">
-                    <dd>I am interested in people</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question1">
-                                <label>
-                                    <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-                    <dd>I start conversations</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question2">
-                                <label>
-                                    <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-                    <dd>I insult people</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question3">
-                                <label>
-                                    <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-                    <dd>I get upset easily</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question4">
-                                <label>
-                                    <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-                    <dd>I change my mood a lot</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question5">
-                                <label>
-                                    <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-                    <dd>I have difficulty understanding abstract ideas</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question6">
-                                <label>
-                                    <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-                    <dd>I often forget to put things back in their proper place</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question7">
-                                <label>
-                                    <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-                    <dd>I have a good imagination</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question8">
-                                <label>
-                                    <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-                    <dd>I spend time reflecting on things</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question9">
-                                <label>
-                                    <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-                    <dd>I am full of ideas</dd>
-                        <div class="bg-info container button-holder text-center">
-                            <div class="radio" id="question10">
-                                <label>
-                                    <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios1" value="Strongly Disagree">
-                                    Strongly Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios2" value="Disagree">
-                                    Disagree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios3" value="Neutral">
-                                    No Opinion  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios4" value="Agree">
-                                    Agree  
-                                </label>
-                                <label>
-                                    <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios5" value="Strongly Agree">
-                                    Strongly Agree  
-                                </label>
-                            </div>
-                        </div>
-            </dl>   
-        </container>
-        <container>
-            <div class="progress container" id="progressBar">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                    0/10
+        <container class="container" id="profileForm">
+            <form>
+                <div class="form-group">
+                    <label for="newName">Full Name</label>
+                    <input type="name" class="bg-info form-control" id="newUsersName" placeholder="Name">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="imageFile">File Input</label>
+                    <input type="file" id="imageInputFile">
+                    <p class="help-block shown">Upload an image of yourself for your new best friend to see.</p>
+                </div>
+            </form>
         </container>
-        <div class="text-center">
-            <input id = "submitBtn" class="btn btn-primary" type="submit" value="Submit Survey">
-        </div>
+        <container class="container" id="survey">
+            <dd>I am interested in people</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question1">
+                        <label>
+                            <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios1" class="optionsRadios optionsRadios5" value="Strongly 4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+            <dd>I start conversations</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question2">
+                        <label>
+                            <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios2" class="optionsRadios optionsRadios5" value="4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+            <dd>I insult people</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question3">
+                        <label>
+                            <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios3" class="optionsRadios optionsRadios5" value="4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+            <dd>I get upset easily</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question4">
+                        <label>
+                            <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios4" class="optionsRadios optionsRadios5" value="4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+            <dd>I change my mood a lot</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question5">
+                        <label>
+                            <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios5" class="optionsRadios optionsRadios5" value="4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+            <dd>I have difficulty understanding abstract ideas</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question6">
+                        <label>
+                            <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios6" class="optionsRadios optionsRadios5" value="4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+            <dd>I often forget to put things back in their proper place</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question7">
+                        <label>
+                            <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios7" class="optionsRadios optionsRadios5" value="4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+            <dd>I have a good imagination</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question8">
+                        <label>
+                            <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios8" class="optionsRadios optionsRadios5" value="4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+            <dd>I spend time reflecting on things</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question9">
+                        <label>
+                            <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios9" class="optionsRadios optionsRadios5" value="4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+            <dd>I am full of ideas</dd>
+                <div class="bg-info container button-holder text-center">
+                    <div class="radio" id="question10">
+                        <label>
+                            <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios1" value="0">
+                            Strongly Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios2" value="1">
+                            Disagree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios3" value="2">
+                            No Opinion  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios4" value="3">
+                            Agree  
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios10" class="optionsRadios optionsRadios5" value="4">
+                            Strongly Agree  
+                        </label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <!--<a href="/api/:data?">-->
+                        <button id="submitBtn" type="button" class="btn btn-lg btn-primary">
+                            <h4>
+                                Find Your Friend
+                            </h4>
+                        </button>
+                    <!--</a>-->
+                </div>
+        </container>
     </section>
 </body>
 </html>

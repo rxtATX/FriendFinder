@@ -10,10 +10,14 @@
         .button-holder{
             width:75%;
         }
+        #profileForm{
+            width: 75%; 
+        }
         dd{
+            padding-left: 14%;
             padding-top: 1%;
             font-weight: bold;
         }
-        #progressBar{
-            width: 80%;
+        #submitBtn{
+            margin-top: 6%;
         }
