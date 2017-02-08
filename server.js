@@ -20,11 +20,6 @@ app.use("/", routes.survey);
 
 app.use(express.static(path.join(__dirname, "app")));
 
-
-
 app.listen(process.env.PORT || 5000, function() {
     console.log("App listening on PORT " + PORT);
 });
-// app.listen(PORT, function() {
-//   console.log("App listening on PORT " + PORT);
-// });

@@ -1,5 +1,4 @@
 $("document").ready(function(){
-	
   $("#submitBtn").removeClass("toggleModal");
   $(".modal").css("display", "none");
   
@@ -10,12 +9,6 @@ $("document").ready(function(){
       runSurveyHandler();
     }
 	});
-  
-  $("document").on("click", function(event) {
-    if (event.target !== $("#friendModal")) {
-      $("#friendModal").css("display", "none");
-    }
-  });
   
   $("span").on("click", function() {
     $("#friendModal").css("display", "none");
