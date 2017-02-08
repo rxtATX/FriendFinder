@@ -3,7 +3,7 @@ var app = express();
 var path = require("path");
 var bodyParser = require("body-parser");
 
-var PORT = 3000;
+var PORT = 5000;
 
 var api = require("./app/routing/apiRoutes.js");
 var routes = require("./app/routing/htmlRoutes.js");
@@ -22,4 +22,9 @@ app.use(express.static(path.join(__dirname, "app")));
 
 
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 5000, function() {
+    console.log("App listening on PORT " + PORT);
+});
+// app.listen(PORT, function() {
+//   console.log("App listening on PORT " + PORT);
+// });

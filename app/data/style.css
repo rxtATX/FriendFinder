@@ -1,27 +1,27 @@
-        .headings{
-            font-family: 'Carter One', cursive;
-            padding-bottom: 6%;
-            background-color: #D9EDF7;
-        }
-        .survey-body{
-            padding: 4%;
-            background-color: lightsteelblue;
-        }
-        .button-holder{
-            width:75%;
-        }
-        #profileForm{
-            width: 75%; 
-        }
-        dd{
-            padding-left: 14%;
-            padding-top: 1%;
-            font-weight: bold;
-        }
-        #submitBtn{
-            margin-top: 6%;
-        }
-        .modal {
+.headings{
+    font-family: 'Carter One', cursive;
+    padding-bottom: 6%;
+    background-color: #D9EDF7;
+}
+.survey-body{
+    padding: 4%;
+    background-color: lightsteelblue;
+}
+.button-holder{
+    width:75%;
+}
+#profileForm{
+    width: 75%; 
+}
+dd{
+    padding-left: 14%;
+    padding-top: 1%;
+    font-weight: bold;
+}
+#submitBtn{
+    margin-top: 6%;
+}
+.modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
