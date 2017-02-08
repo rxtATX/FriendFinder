@@ -1,9 +1,21 @@
 $("document").ready(function(){
-	
+	$("#submitBtn").removeClass("toggleModal");
+  $(".modal").css("display", "none");
   $("#submitBtn").on("click", function() {
-    runSurveyHandler();
+    if ($("#submitBtn").hasClass("toggleModal")) {
+      displayBestMatch();
+    } else {
+      runSurveyHandler();
+    }
 	});
-
+  window.onclick = function(event) {
+    if (event.target == $("#friendModal")) {
+        $("#friendModal").css("display", "none");
+    }
+  }
+  span.onclick = function() {
+     $("#friendModal").css("display", "none");
+  }
 });
 
 function runSurveyHandler() {
@@ -25,21 +37,27 @@ function runSurveyHandler() {
     }
   }
 
-  // if (checkedValues.length < 10 ||
-  //     name === undefined ||
-  //     photo === undefined) {
-  	
-  //   $('#submitBtn').bind('click', function(e){
-  //       e.preventDefault();
-  //   });
-  // } else if (checkedValues.length === 10 &&
-  //   name !== undefined &&
-  //   photo !== undefined) {
-    
-  //   $('#submitBtn').unbind('click')
-  // }
+  if (checkedValues.length === 10 &&
+    name !== undefined &&
+    photo !== undefined) {
+    postThisFriend(formInput);
+  }
+}
 
+function postThisFriend(info) {
+  $("#submitBtn").addClass("toggleModal");
+  $("#submitBtn").html("<h4>View Your Friend</h4>")
+  $.post("/api", info).done(function(response) {
+    console.log("Your new friend has been created.");
+    displayBestMatch(response);
+  });
+}
 
-  console.log(formInput);
+function displayBestMatch(friends) {
+  
+  var modal = $("#friendModal");
+  var span = $(".span")[0];
+  modal.css("display", "block");
+  
 }
 

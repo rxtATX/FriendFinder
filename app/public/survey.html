@@ -16,6 +16,13 @@
             <h2>Take our survey to find your newest friend!</h2>
         </container>
         <container class="container" id="profileForm">
+            <div id="friendModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="modalName"></p>
+                    <p id="modalPhoto"></p>
+                </div>
+            </div>
             <form>
                 <div class="form-group">
                     <label for="newName">Full Name</label>
@@ -280,13 +287,11 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <!--<a href="/api/:data?">-->
-                        <button id="submitBtn" type="button" class="btn btn-lg btn-primary">
-                            <h4>
-                                Find Your Friend
-                            </h4>
-                        </button>
-                    <!--</a>-->
+                    <button id="submitBtn" type="button" class="btn btn-lg btn-primary">
+                        <h4>
+                            Find Your Friend
+                        </h4>
+                    </button>
                 </div>
         </container>
     </section>
