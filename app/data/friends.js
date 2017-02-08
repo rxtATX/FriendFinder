@@ -1,6 +1,8 @@
 $("document").ready(function(){
-	$("#submitBtn").removeClass("toggleModal");
+	
+  $("#submitBtn").removeClass("toggleModal");
   $(".modal").css("display", "none");
+  
   $("#submitBtn").on("click", function() {
     if ($("#submitBtn").hasClass("toggleModal")) {
       displayBestMatch();
@@ -8,15 +10,16 @@ $("document").ready(function(){
       runSurveyHandler();
     }
 	});
-  window.onclick = function(event) {
-    if (event.target == $("#friendModal")) {
+  
+  $("document").on("click", function(event) {
+    if (event.target !== $("#friendModal")) {
       $("#friendModal").css("display", "none");
     }
-  };
-  var span = $("span");
-  span.onclick = function() {
-     $("#friendModal").css("display", "none");
-  };
+  });
+  
+  $("span").on("click", function() {
+    $("#friendModal").css("display", "none");
+  });
 });
 
 function runSurveyHandler() {
@@ -48,18 +51,31 @@ function runSurveyHandler() {
 }
 
 function postThisFriend(info) {
-  $.post("/api", info).done(function(response) {
-  // calculateBestMatch(response);
+  $.ajax({
+    method: "POST",
+    url: "/api",
+    data: info
+  });
+  
+  $.ajax({
+    method: "GET",
+    url: "/api",
+    data: JSON
+  }).done(function(data){
+    calculateBestMatch(data);
   });
 }
 
-// function calculateBestMatch() {
-  //Do something
-// }
+function calculateBestMatch(friendsList) {
+  var thisUser = friendsList[friendsList.length - 1];
+  var bestFriend = friendsList[3];
+  displayBestMatch(bestFriend);
+}
 
 
-function displayBestMatch(friends) {
+function displayBestMatch(friend) {
   $("#friendModal").css("display", "block");
-  //Do something else
+  $("#modalName").html(friend.name);
+  $("#modalName").append("\n<img id='modalPhoto'class='center-block img-responsive' src=" + friend.photo + "alt='New Friend's Photo'></img>");
 }
 
