@@ -3,7 +3,7 @@ var app = express();
 var path = require("path");
 var bodyParser = require("body-parser");
 
-var PORT = 5000;
+var PORT = 3000;
 
 var api = require("./app/routing/apiRoutes.js");
 var routes = require("./app/routing/htmlRoutes.js");
