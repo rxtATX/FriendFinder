@@ -1,3 +1,4 @@
+//Exports the data of the full JSON object to be called by the web app.
 exports.data = [{
   name: "Rachel Greene",
   answersArray: [3,3,3,4,4,2,4,2,0,2],

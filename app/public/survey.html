@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Linking scripts and styles for web app.-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../data/style.css">
@@ -9,8 +10,10 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="../data/friends.js"></script>
 </head>
+<!--Modal will be hidden until populated.-->
 <body id="secondPageContent">
     <section class="container survey-body">
+        <!--These headers will be identical on both pages.-->
         <container class="text-center headings">
             <div id="friendModal" class="modal container">
                 <div class="modal-content">
@@ -21,19 +24,22 @@
             <h1>Friend Finder Survey</h1>
             <h2>Take our survey to find your newest friend!</h2>
         </container>
+        <!--Portion of the page which will capture name and photo of user.-->
         <container class="container" id="profileForm">
             <form id="myDetails">
                 <div class="form-group">
                     <label for="newName">Full Name</label>
                     <input type="name" class="form-control" id="newUsersName" placeholder="Name">
+                    <p class="text-danger help-block left-text has-error" id="nameValid"></p>
                 </div>
                 <div class="form-group">
                     <label for="imageFile">File Input</label>
-                    <input type="file" id="imageInputFile">
-                    <p class="help-block shown">Upload an image of yourself for your new best friend to see.</p>
+                    <input name="file" onclick="checkState" type="file" id="imageInputFile">
+                    <p id="imageValid" class="help-block">Upload an image of yourself for your new best friend to see.</p>
                 </div>
             </form>
         </container>
+        <!--A 10-question survey to determine personality type of user.-->
         <container class="container" id="survey">
             <dd>I am interested in people</dd>
                 <div class="bg-info container button-holder text-center">
@@ -285,9 +291,12 @@
                         </label>
                     </div>
                 </div>
+                <!--When the button is clicked, if all forms of input have been filled, the algorithm to determine best match will launch and populate the modal. Otherwise, this will be a non-functioning button.-->
                 <div class="text-center">
+                    <p class="text-danger help-block has-error" id="surveyValid"></p>
                     <button id="submitBtn" type="button" class="btn btn-lg btn-primary">
                         <h4>
+                            <!--Once the modal has been populated this will no longer submit the form, but show the modal.-->
                             Find Your Friend
                         </h4>
                     </button>

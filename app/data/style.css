@@ -17,13 +17,19 @@
     width: 75%;
     margin: 0 auto;
 }
+.has-error{
+    color: darkred;
+}
 dd{
     padding-left: 14%;
     padding-top: 1%;
     font-weight: bold;
 }
-#submitBtn{
-    margin-top: 6%;
+#imageValid{
+    margin-bottom: -3%;
+}
+#surveyValid{
+    margin-top: 4%;
 }
 .modal {
     position: fixed;
