@@ -4,7 +4,7 @@ $("document").ready(function(){
   
   $("#submitBtn").on("click", function() {
     if ($("#submitBtn").hasClass("toggleModal")) {
-      displayBestMatch();
+      // displayBestMatch();
     } else {
       runSurveyHandler();
     }
@@ -60,8 +60,38 @@ function postThisFriend(info) {
 }
 
 function calculateBestMatch(friendsList) {
-  var thisUser = friendsList[friendsList.length - 1];
-  var bestFriend = friendsList[3];
+  var thisUser = friendsList.pop();
+  friendsList.length = friendsList.length - 1;
+  var compatabilityIndex = [];
+
+  for (var i = 0; i < friendsList.length; i++) {
+    var potentialFriend = friendsList[i];  
+    var compatability = 0;
+    for (var j = 0; j < thisUser.answersArray.length; j++) {
+
+      if (thisUser.answersArray[j] === potentialFriend.answersArray[j]) {
+        compatability = compatability + 2;
+      }
+      if (thisUser.answersArray[j] > potentialFriend.answersArray[j]) {
+        if (thisUser.answersArray[j] - potentialFriend.answersArray[j] <= 2) {
+         compatability = compatability + 1;
+        } else if (thisUser.answersArray[j] - potentialFriend.answersArray[j] >=3) {
+          //compatability does not increase.
+        }
+      }
+      if (potentialFriend.answersArray[j] < thisUser.answersArray[j]) {
+        if (potentialFriend.answersArray[j] - thisUser.answersArray[j] <= 2) {
+          compatability = compatability + 1;
+        } else if (potentialFriend.answersArray[j] - thisUser.answersArray[j] >=3) {
+          //compatability does not increase
+        }
+      }
+    }
+    compatabilityIndex.push(compatability);
+  }
+  var bestFriendValue = Math.max.apply(Math, compatabilityIndex);
+  var bestFriendIndex = $.inArray(bestFriendValue, compatabilityIndex);
+  var bestFriend = friendsList[bestFriendIndex];
   displayBestMatch(bestFriend);
 }
 
