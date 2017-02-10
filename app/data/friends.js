@@ -139,6 +139,7 @@ function calculateBestMatch(friendsList) {
     var bestFriend = friendsList[bestFriendIndex];
     //Passes that best friend variable to the next function.
     displayBestMatch(bestFriend);
+    console.log(bestFriend);
 }
 //Shows the best friend in the modal with their name and photo.
 function displayBestMatch(friend) {
